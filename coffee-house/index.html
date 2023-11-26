@@ -9,47 +9,124 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script type="module" src="src/main.js"></script>
   <title>Coffee house</title>
 </head>
 
 <body>
-  <header class="header" id="header">
-    <div class="container">
-      header
-      <nav>navigation</nav>
-    </div>
+  <header class="" id="header">
+    <nav class="nav container">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="/index.html">
+            <img class="logo" src="src/imgs/logo.png" alt="logo">
+          </a>
+        </li>
+
+        <li>
+          <ul>
+            <li class="nav__item">
+              <a class="nav__link" href="#favorites">Favourite coffee</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#mobile-app">Mobile app</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#footer">Contact us</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <a class="nav__link" href="/menu">Menu</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <section class="hero-section" id="hero">
     <div class="hero container">
-      hero section
+      <div class="hero__info">
+        <h2 class="hero__title">Enjoy premium coffee at our charming cafe</h2>
+        <p class="hero__text">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a
+          popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite
+          beverage.</p>
+        <button>Menu</button>
+      </div>
+      <div class="hero__img">
+        <img src="src/imgs/hero.jpeg" alt="coffee">
+      </div>
     </div>
   </section>
 
   <section class="favorites-section" id="favorites">
     <div class="favorites container">
-      Favourites coofee
+      <h2>Choose your favorite coffee</h2>
+      <div class="carousel">
+        <button class="carousel__btn"></button>
+        <div class="carousel__content">
+          <img src="src/imgs/coffee-slider-1.png" alt="frappuccino">
+          <h3>S'mores Frappuccino</h3>
+          <p>$5.50</p>
+        </div>
+      </div>
+      <div class="carousel__bars">
+        <div class="carousel__bar carousel__bar--active"></div>
+        <div class="carousel__bar"></div>
+        <div class="carousel__bar"></div>
+      </div>
     </div>
   </section>
 
   <section class="about-section" id="about">
     <div class="about container">
-      About
+      <h2>Resource is the perfect and cozy place where you can enjoy a variety of hot beverages, relax, catch up with
+        friends, or get some work done.</h2>
+      <div class="gallery">
+        <figure class="gallery-item gallery-item--1"><img src="src/imgs/about-1.jpeg" alt=""></figure>
+        <figure class="gallery-item gallery-item--2"><img src="src/imgs/about-2.jpeg" alt=""></figure>
+        <figure class="gallery-item gallery-item--3"><img src="src/imgs/about-3.jpeg" alt=""></figure>
+        <figure class="gallery-item gallery-item--4"><img src="src/imgs/about-4.jpeg" alt=""></figure>
+      </div>
     </div>
   </section>
 
   <section class="mobile-app-section" id="mobile-app">
     <div class="mobile-app container">
-      Mobile app
+      <div class="mobile-app__info">
+        <h2>Download our apps to start ordering</h2>
+        <p>Download the Resource app today and experience the comfort of ordering your favorite coffee frhom wherever
+          you
+          are</p>
+        <div class="mobile-app__links">
+          <a href="">apple</a>
+          <a href="">google</a>
+        </div>
+      </div>
+      <img src="src/imgs/mobile-screens.png" alt="" class="mobile-app__img">
     </div>
   </section>
 
   <footer class="footer" id="footer">
     <div class="container">
-      footer
+      <h2>Sip, Savor, Smile. It’s coffee time!</h2>
+      <div class="footer__link">
+        <a href="">twitter</a>
+        <a href="">instagram</a>
+        <a href="">facebook</a>
+      </div>
+      <div class="footer__contact">
+        <h3>Contact us</h3>
+        <a href="">8558 Green Rd., LA</a>
+        <a href="tel:+16035550123">+1 (603) 555-0123</a>
+        <p>Mon-Sat: 9:00 AM – 23:00 PM</p>
+      </div>
     </div>
   </footer>
-  <script type="module" src="/src/main.js"></script>
+
 </body>
 
 </html>

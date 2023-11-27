@@ -72,7 +72,7 @@
 
   &--light:link,
   &--light:visited {
-    border-color: var(--color-border-light);
+    border-color: var(--color-text-light);
 
     svg {
       stroke: var(--color-border-light);
@@ -82,7 +82,7 @@
   &--light:hover,
   &--light:active {
     background-color: var(--color-bg-body);
-    border-color: var(--color-border-light);
+    border-color: var(--color-bg-body);
 
     svg {
       stroke: var(--color-text-dark);

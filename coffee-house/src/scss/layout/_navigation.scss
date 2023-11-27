@@ -1,0 +1,43 @@
+.nav {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li ul {
+      flex: 1;
+      display: flex;
+      gap: 4rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: flex;
+      align-items: start;
+      gap: 0.8rem;
+
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 160%;
+
+      text-decoration: none;
+      color: var(--color-text-dark);
+      transition: all 0.3s;
+      border-bottom: 0.2rem solid transparent;
+    }
+
+    &:hover,
+    &:active,
+    &--active:link,
+    &--active:visited {
+      border-color: var(--color-text-dark);
+    }
+  }
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}

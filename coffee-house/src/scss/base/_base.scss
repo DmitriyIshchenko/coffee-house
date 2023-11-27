@@ -22,6 +22,14 @@ body {
   scrollbar-gutter: stable;
 }
 
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
 .container {
   max-width: 144rem;
   margin: 0 auto;

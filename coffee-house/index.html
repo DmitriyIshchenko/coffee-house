@@ -8,13 +8,13 @@
   <link rel="stylesheet" href="src/scss/main.scss">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <script type="module" src="src/main.js"></script>
   <title>Coffee house</title>
 </head>
 
 <body>
-  <header class="" id="header">
+  <header class="header" id="header">
     <nav class="nav container">
       <ul class="nav__list">
         <li class="nav__item">
@@ -26,7 +26,7 @@
         <li>
           <ul>
             <li class="nav__item">
-              <a class="nav__link" href="#favorites">Favourite coffee</a>
+              <a class="nav__link" href="#favorites">Favorite coffee</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#about">About</a>
@@ -41,7 +41,12 @@
         </li>
 
         <li class="nav__item">
-          <a class="nav__link" href="/menu">Menu</a>
+          <a class="nav__link" href="/menu">
+            <span>Menu</span>
+            <svg>
+              <use href="src/imgs/sprite.svg#coffee-cup"></use>
+            </svg>
+          </a>
         </li>
       </ul>
     </nav>

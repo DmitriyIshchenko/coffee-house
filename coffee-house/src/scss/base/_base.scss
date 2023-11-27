@@ -27,6 +27,7 @@ ul {
 }
 
 img {
+  display: block;
   width: 100%;
 }
 
@@ -34,5 +35,5 @@ img {
   max-width: 144rem;
   margin: 0 auto;
 
-  padding-inline: 4rem;
+  margin-inline: 4rem;
 }

@@ -1,0 +1,23 @@
+.hero {
+  background-image: url("/src/imgs/hero.jpeg");
+  background-size: cover;
+  background-position: 0%;
+  border-radius: 4rem;
+  padding: 10rem;
+
+  &__info {
+    width: 53rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__title {
+    color: var(--color-text-light);
+  }
+
+  &__text {
+    color: var(--color-text-light);
+  }
+}

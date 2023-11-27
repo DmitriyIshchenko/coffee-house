@@ -34,6 +34,11 @@
     &--active:visited {
       border-color: var(--color-text-dark);
     }
+
+    &--active:link,
+    &--active:visited {
+      cursor: not-allowed;
+    }
   }
 
   svg {

@@ -52,71 +52,92 @@
     </nav>
   </header>
 
-  <section class="hero-section" id="hero">
-    <div class="hero container">
-      <div class="hero__info">
-        <h1 class="hero__title heading-1"><span class="text-accent">Enjoy</span> premium coffee at our charming cafe
-        </h1>
-        <p class="hero__text">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a
-          popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite
-          beverage.</p>
-        <a href="/menu.html" class="btn-primary">
-          <span>Menu</span>
-          <svg>
-            <use href="src/imgs/sprite.svg#coffee-cup"></use>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
+  <main class="main">
 
-  <section class="favorites-section" id="favorites">
-    <div class="favorites container">
-      <h2>Choose your favorite coffee</h2>
-      <div class="carousel">
-        <button class="carousel__btn"></button>
-        <div class="carousel__content">
-          <img src="src/imgs/coffee-slider-1.png" alt="frappuccino">
-          <h3>S'mores Frappuccino</h3>
-          <p>$5.50</p>
+    <section class="hero-section" id="hero">
+      <div class="hero container">
+        <div class="hero__info">
+          <h1 class="hero__title heading-1"><span class="text-accent">Enjoy</span> premium coffee at our charming cafe
+          </h1>
+          <p class="hero__text">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is
+            a
+            popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite
+            beverage.</p>
+          <a href="/menu.html" class="btn-primary">
+            <span>Menu</span>
+            <svg>
+              <use href="src/imgs/sprite.svg#coffee-cup"></use>
+            </svg>
+          </a>
         </div>
       </div>
-      <div class="carousel__bars">
-        <div class="carousel__bar carousel__bar--active"></div>
-        <div class="carousel__bar"></div>
-        <div class="carousel__bar"></div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="about-section" id="about">
-    <div class="about container">
-      <h2>Resource is the perfect and cozy place where you can enjoy a variety of hot beverages, relax, catch up with
-        friends, or get some work done.</h2>
-      <div class="gallery">
-        <figure class="gallery-item gallery-item--1"><img src="src/imgs/about-1.jpeg" alt=""></figure>
-        <figure class="gallery-item gallery-item--2"><img src="src/imgs/about-2.jpeg" alt=""></figure>
-        <figure class="gallery-item gallery-item--3"><img src="src/imgs/about-3.jpeg" alt=""></figure>
-        <figure class="gallery-item gallery-item--4"><img src="src/imgs/about-4.jpeg" alt=""></figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="mobile-app-section" id="mobile-app">
-    <div class="mobile-app container">
-      <div class="mobile-app__info">
-        <h2>Download our apps to start ordering</h2>
-        <p>Download the Resource app today and experience the comfort of ordering your favorite coffee frhom wherever
-          you
-          are</p>
-        <div class="mobile-app__links">
-          <a href="">apple</a>
-          <a href="">google</a>
+    <section class="favorites-section" id="favorites">
+      <div class="favorites container">
+        <h2 class="favorites__title heading-2">Choose your <span class="text-accent">favorite</span> coffee</h2>
+        <div class="carousel">
+          <button class="btn-icon carousel__btn carousel__btn--prev">
+            <svg>
+              <use href="src/imgs/sprite.svg#arrow-left"></use>
+            </svg>
+          </button>
+          <div class="carousel__slide">
+            <div class="item">
+              <img src="src/imgs/coffee-slider-1.png" alt="frappuccino">
+              <div class="item__info">
+                <h3 class="heading-3">S'mores Frappuccino</h3>
+                <p>This new drink takes an espresso and mixes it with brown sugar
+                  and cinnamon
+                  before being topped with oat milk.</p>
+                <p class="heading-3">$5.50</p>
+              </div>
+            </div>
+          </div>
+          <button class="btn-icon carousel__btn carousel__btn--next">
+            <svg>
+              <use href="src/imgs/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="carousel__bars">
+          <div class="carousel__bar carousel__bar--active"></div>
+          <div class="carousel__bar"></div>
+          <div class="carousel__bar"></div>
         </div>
       </div>
-      <img src="src/imgs/mobile-screens.png" alt="" class="mobile-app__img">
-    </div>
-  </section>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about container">
+        <h2 class="heading-2">Resource is the perfect and cozy place where you can enjoy a variety of hot beverages,
+          relax, catch up with
+          friends, or get some work done.</h2>
+        <div class="gallery">
+          <figure class="gallery-item gallery-item--1"><img src="src/imgs/about-1.jpeg" alt=""></figure>
+          <figure class="gallery-item gallery-item--2"><img src="src/imgs/about-2.jpeg" alt=""></figure>
+          <figure class="gallery-item gallery-item--3"><img src="src/imgs/about-3.jpeg" alt=""></figure>
+          <figure class="gallery-item gallery-item--4"><img src="src/imgs/about-4.jpeg" alt=""></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="mobile-app-section" id="mobile-app">
+      <div class="mobile-app container">
+        <div class="mobile-app__info">
+          <h2>Download our apps to start ordering</h2>
+          <p>Download the Resource app today and experience the comfort of ordering your favorite coffee frhom wherever
+            you
+            are</p>
+          <div class="mobile-app__links">
+            <a href="">apple</a>
+            <a href="">google</a>
+          </div>
+        </div>
+        <img src="src/imgs/mobile-screens.png" alt="" class="mobile-app__img">
+      </div>
+    </section>
+  </main>
 
   <footer class="footer" id="footer">
     <div class="container">

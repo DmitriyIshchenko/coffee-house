@@ -1,0 +1,57 @@
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__btn {
+    &--prev {
+      left: 0.4rem;
+    }
+
+    &--next {
+      right: 0.4rem;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__bars {
+    margin-top: 4rem;
+
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__bar {
+    width: 4rem;
+    height: 0.4rem;
+    border-radius: 100rem;
+
+    background-color: var(--color-border-light);
+
+    &--active {
+      background-color: var(--color-border-dark);
+    }
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 48rem;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.6rem;
+  }
+}

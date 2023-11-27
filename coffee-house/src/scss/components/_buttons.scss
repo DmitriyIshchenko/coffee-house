@@ -11,6 +11,7 @@
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 150%;
+  transition: all 0.3s;
 
   text-decoration: none;
   color: var(--color-text-dark);
@@ -37,6 +38,35 @@
   &:active {
     svg {
       max-width: 2rem;
+    }
+  }
+}
+
+.btn-icon {
+  &,
+  &:link,
+  &:visited {
+    @extend %btn;
+
+    width: 6rem;
+    height: 6rem;
+
+    background-color: transparent;
+    border: 1px solid var(--color-border-dark);
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      stroke: var(--color-text-dark);
+    }
+  }
+
+  &:hover,
+  &:active {
+    background-color: var(--color-bg-container);
+
+    svg {
+      stroke: var(--color-text-light);
     }
   }
 }

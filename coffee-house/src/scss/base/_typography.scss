@@ -1,3 +1,9 @@
+@font-face {
+  font-family: Inter-italic;
+  font-style: italic;
+  src: url(https://fonts.cdnfonts.com/s/19795/Inter-SemiBoldItalic.woff);
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
@@ -26,7 +32,7 @@ body {
 }
 
 .text-accent {
-  font-style: italic;
+  font-family: Inter-italic;
   color: var(--color-text-accent);
 }
 

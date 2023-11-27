@@ -128,16 +128,30 @@
     <section class="mobile-app-section" id="mobile-app">
       <div class="mobile-app container">
         <div class="mobile-app__info">
-          <h2>Download our apps to start ordering</h2>
+          <h2 class="heading-2"><span class="text-accent">Download</span> our apps to start ordering</h2>
           <p>Download the Resource app today and experience the comfort of ordering your favorite coffee frhom wherever
             you
             are</p>
           <div class="mobile-app__links">
-            <a href="">apple</a>
-            <a href="">google</a>
+            <a class="btn-appstore" href="#">
+              <svg class="btn-appstore__icon">
+                <use href="src/imgs/sprite.svg#apple"></use>
+              </svg>
+              <span class="btn-appstore__caption text-caption">Available on the</span>
+              <span class="btn-appstore__title">App store</span>
+            </a>
+            <a class="btn-appstore" href="#">
+              <svg class="btn-appstore__icon">
+                <use href="src/imgs/sprite.svg#google"></use>
+              </svg>
+              <span class="btn-appstore__caption text-caption">Available on</span>
+              <span class="btn-appstore__title">Google play</span>
+            </a>
           </div>
         </div>
-        <img src="src/imgs/mobile-screens.png" alt="" class="mobile-app__img">
+        <div class="mobile-app__img-box">
+          <img src="src/imgs/mobile-screens.png" alt="" class="mobile-app__img">
+        </div>
       </div>
     </section>
   </main>

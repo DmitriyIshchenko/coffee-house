@@ -34,3 +34,16 @@ body {
   font-size: 1rem;
   font-weight: 600;
 }
+
+.text-link {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 150%;
+
+  text-decoration: none;
+  color: var(--color-text-light);
+}
+
+.text-light {
+  color: var(--color-text-light);
+}

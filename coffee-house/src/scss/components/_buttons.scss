@@ -69,6 +69,25 @@
       stroke: var(--color-text-light);
     }
   }
+
+  &--light:link,
+  &--light:visited {
+    border-color: var(--color-border-light);
+
+    svg {
+      stroke: var(--color-border-light);
+    }
+  }
+
+  &--light:hover,
+  &--light:active {
+    background-color: var(--color-bg-body);
+    border-color: var(--color-border-light);
+
+    svg {
+      stroke: var(--color-text-dark);
+    }
+  }
 }
 
 .btn-appstore {

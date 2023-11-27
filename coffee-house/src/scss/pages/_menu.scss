@@ -1,0 +1,22 @@
+.menu {
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+
+    margin-bottom: 4rem;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, 31rem);
+    gap: 4rem;
+  }
+}
+
+.menu-title {
+  text-align: center;
+  text-wrap: balance;
+  margin-bottom: 4rem;
+}

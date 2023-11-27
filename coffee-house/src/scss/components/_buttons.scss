@@ -1,0 +1,42 @@
+%btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  width: 20rem;
+  padding-block: 2rem;
+  border-radius: 100rem;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 150%;
+
+  text-decoration: none;
+  color: var(--color-text-dark);
+
+  cursor: pointer;
+}
+
+.btn-primary {
+  &,
+  &:link,
+  &:visited {
+    @extend %btn;
+
+    background-color: var(--color-bg-body);
+
+    svg {
+      transition: all 0.3s;
+      max-width: 0;
+      height: 2rem;
+    }
+  }
+
+  &:hover,
+  &:active {
+    svg {
+      max-width: 2rem;
+    }
+  }
+}

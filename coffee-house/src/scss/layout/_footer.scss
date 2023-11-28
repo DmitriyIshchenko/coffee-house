@@ -62,6 +62,9 @@
     &:active {
       border-color: var(--color-border-light);
     }
+    &--schedule {
+      pointer-events: none;
+    }
 
     svg {
       width: 2rem;

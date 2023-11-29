@@ -45,6 +45,7 @@
     &,
     &:link,
     &:visited {
+      position: relative;
       display: flex;
       align-items: center;
       width: max-content;
@@ -58,10 +59,22 @@
       transition: all 0.3s;
     }
 
-    &:hover,
-    &:active {
-      border-color: var(--color-border-light);
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-bottom: 0.2rem solid var(--color-border-light);
+      transition: all 0.3s;
+      transform: scaleX(0);
     }
+
+    &:hover:after,
+    &:active:after {
+      transform: scaleX(1);
+    }
+
     &--schedule {
       pointer-events: none;
     }

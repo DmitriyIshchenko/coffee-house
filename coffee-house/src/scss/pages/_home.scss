@@ -12,6 +12,11 @@
   padding: 10rem;
   max-width: 136rem;
 
+  @include respond(tablet) {
+    background-position: 50%;
+    padding-inline: 6rem;
+  }
+
   &__info {
     width: 53rem;
 

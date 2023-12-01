@@ -24,28 +24,20 @@
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
-
+            <a class="nav__link" href="index.html#favorites">Favorite coffee</a>
           </li>
-
-          <li>
-            <ul>
-              <li class="nav__item">
-                <a class="nav__link" href="#favorites">Favorite coffee</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#about">About</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#mobile-app">Mobile app</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#footer">Contact us</a>
-              </li>
-            </ul>
-          </li>
-
           <li class="nav__item">
-            <a class="nav__link nav__link--active" href="menu.html">
+            <a class="nav__link" href="index.html#about">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="index.html#mobile-app">Mobile app</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#footer">Contact us</a>
+          </li>
+
+          <li class="nav__item nav__item--menu">
+            <a class="menu-link menu-link--active" href="menu.html">
               <span>Menu</span>
               <svg>
                 <use href="src/imgs/sprite.svg#coffee-cup"></use>
@@ -54,6 +46,15 @@
           </li>
         </ul>
       </nav>
+
+      <a class="menu-link nav__link menu-link--active" href="menu.html">
+        <span>Menu</span>
+        <svg>
+          <use href="src/imgs/sprite.svg#coffee-cup"></use>
+        </svg>
+      </a>
+
+      <button class="btn-nav"></button>
     </div>
   </header>
 

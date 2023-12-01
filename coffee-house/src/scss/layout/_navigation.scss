@@ -1,18 +1,44 @@
 .nav {
-  flex: 1;
+  @include respond(tablet) {
+    position: fixed;
+    z-index: 1000;
+    top: 10rem; // header height
+    left: 0;
+    width: 100%;
+    transform: translateX(100%);
+    transition: all 0.3s;
+
+    // subtract header height
+    height: calc(100vh - 10rem);
+
+    background-color: var(--color-bg-body);
+  }
 
   &__list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 4rem;
 
-    li ul {
-      display: flex;
-      gap: 4rem;
+    @include respond(tablet) {
+      flex-direction: column;
+      align-items: center;
+      gap: 6rem;
+
+      padding-block: 6rem;
+      height: 100%;
+    }
+
+    .nav__item--menu {
+      display: none;
+
+      @include respond(tablet) {
+        display: block;
+        margin-top: 4rem;
+      }
     }
   }
 
-  &__link {
+  &__link,
+  .menu-link {
     &:link,
     &:visited {
       position: relative;
@@ -27,8 +53,15 @@
       text-decoration: none;
       color: var(--color-text-dark);
       transition: all 0.3s;
+
+      @include respond(tablet) {
+        font-size: 3.2rem;
+        line-height: 125%;
+        gap: 1.6rem;
+      }
     }
 
+    // underline hover effect
     &::after {
       content: "";
       position: absolute;
@@ -38,23 +71,121 @@
       border-bottom: 0.2rem solid var(--color-border-dark);
       transition: all 0.3s;
       transform: scaleX(0);
+
+      @include respond(tablet) {
+        border-width: 0.3rem;
+      }
     }
 
-    &--active:link:after,
-    &--active:visited:after,
     &:hover:after,
     &:active:after {
       transform: scaleX(1);
-    }
 
-    &--active:link,
-    &--active:visited {
-      pointer-events: none;
+      // disable hover effect on touch devices
+      @media (hover: none) {
+        transform: scaleX(0);
+      }
     }
+  }
+}
+
+.menu-link {
+  &:link,
+  &:visited {
+    position: relative;
+
+    // show link inside nav
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+
+  &--active:link,
+  &--active:visited {
+    // always underlined
+    padding-bottom: 0.5rem;
+    &::after {
+      transform: scaleX(1);
+      border-width: 0.3rem;
+    }
+    pointer-events: none;
   }
 
   svg {
     width: 2rem;
     height: 2rem;
+
+    @include respond(tablet) {
+      width: 4rem;
+      height: 4rem;
+    }
   }
+}
+
+.header.nav-open {
+  @include respond(tablet) {
+    .nav {
+      transform: translateX(0);
+    }
+  }
+}
+
+.btn-nav {
+  @extend %btn;
+  display: none;
+
+  width: 4.4rem;
+  height: 4.4rem;
+  background-color: transparent;
+  border: 0.1rem solid var(--color-border-dark);
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 1.6rem;
+    left: 50%;
+    width: 1.8rem;
+    border: 1px solid var(--color-text-dark);
+
+    transform: rotate(0deg) translate(-50%, 0);
+
+    transition: all 0.3s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    bottom: 1.6rem;
+    left: 50%;
+    width: 1.8rem;
+    border: 1px solid var(--color-text-dark);
+
+    transform: rotate(0deg) translate(-50%, 0);
+
+    transition: all 0.3s;
+  }
+
+  @include respond(tablet) {
+    display: block;
+  }
+}
+
+.header.nav-open {
+  .btn-nav {
+    &::before {
+      transform: rotate(-45deg) translate(-50%, -0.3rem);
+    }
+
+    &::after {
+      transform: rotate(45deg) translate(-50%, 0.3rem);
+    }
+  }
+}
+
+body:has(.header.nav-open) {
+  overflow: hidden;
 }

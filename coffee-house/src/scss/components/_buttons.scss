@@ -65,12 +65,24 @@
     }
   }
 
-  &:hover,
-  &:active {
-    background-color: var(--color-bg-container);
+  @media (hover: hover) {
+    &:hover,
+    &:active {
+      background-color: var(--color-bg-container);
 
-    svg {
-      stroke: var(--color-text-light);
+      svg {
+        stroke: var(--color-text-light);
+      }
+    }
+
+    &--light:hover,
+    &--light:active {
+      background-color: var(--color-bg-body);
+      border-color: var(--color-bg-body);
+
+      svg {
+        stroke: var(--color-text-dark);
+      }
     }
   }
 
@@ -80,16 +92,6 @@
 
     svg {
       stroke: var(--color-border-light);
-    }
-  }
-
-  &--light:hover,
-  &--light:active {
-    background-color: var(--color-bg-body);
-    border-color: var(--color-bg-body);
-
-    svg {
-      stroke: var(--color-text-dark);
     }
   }
 }

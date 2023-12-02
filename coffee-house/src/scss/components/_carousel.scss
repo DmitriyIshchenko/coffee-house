@@ -4,6 +4,10 @@
   align-items: center;
   justify-content: space-between;
 
+  @include respond(phone) {
+    justify-content: center;
+  }
+
   &__btn {
     &--prev {
       left: 0.4rem;

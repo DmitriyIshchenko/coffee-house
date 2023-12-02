@@ -18,6 +18,8 @@ body {
   font-weight: 600;
   line-height: 105%;
 
+  transition: all 0.3s;
+
   @include respond(phone) {
     font-size: 4.2rem;
     line-height: 115%;
@@ -28,6 +30,8 @@ body {
   font-size: 6rem;
   font-weight: 600;
   line-height: 125%;
+
+  transition: all 0.3s;
 
   @include respond(phone) {
     font-size: 3.2rem;

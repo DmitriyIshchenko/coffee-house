@@ -11,7 +11,7 @@
 
   background-color: var(--color-bg-container);
 
-  @include respond(tablet) {
+  @include respond(tablet-land) {
     flex-direction: column;
     align-items: start;
 
@@ -19,6 +19,10 @@
   }
 
   @include respond(phone) {
+    padding: 10rem 4rem;
+  }
+
+  @include respond(phone-sm) {
     padding: 6rem 1.6rem;
     gap: 4rem;
   }

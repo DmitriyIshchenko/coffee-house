@@ -1,5 +1,5 @@
 .nav {
-  @include respond(tablet) {
+  @include respond(tablet-port) {
     position: fixed;
     z-index: 1000;
     top: 10rem; // header height
@@ -18,7 +18,7 @@
     display: flex;
     gap: 4rem;
 
-    @include respond(tablet) {
+    @include respond(tablet-port) {
       flex-direction: column;
       align-items: center;
       gap: 6rem;
@@ -30,7 +30,7 @@
     .nav__item--menu {
       display: none;
 
-      @include respond(tablet) {
+      @include respond(tablet-port) {
         display: block;
         margin-top: 4rem;
       }
@@ -54,7 +54,7 @@
       color: var(--color-text-dark);
       transition: all 0.3s;
 
-      @include respond(tablet) {
+      @include respond(tablet-port) {
         font-size: 3.2rem;
         line-height: 125%;
         gap: 1.6rem;
@@ -72,7 +72,7 @@
       transition: all 0.3s;
       transform: scaleX(0);
 
-      @include respond(tablet) {
+      @include respond(tablet-port) {
         border-width: 0.3rem;
       }
     }
@@ -95,7 +95,7 @@
     position: relative;
 
     // show link inside nav
-    @include respond(tablet) {
+    @include respond(tablet-port) {
       display: none;
     }
   }
@@ -115,7 +115,7 @@
     width: 2rem;
     height: 2rem;
 
-    @include respond(tablet) {
+    @include respond(tablet-port) {
       width: 4rem;
       height: 4rem;
     }
@@ -123,7 +123,7 @@
 }
 
 .header.nav-open {
-  @include respond(tablet) {
+  @include respond(tablet-port) {
     .nav {
       transform: translateX(0);
     }
@@ -169,7 +169,7 @@
     transition: all 0.3s;
   }
 
-  @include respond(tablet) {
+  @include respond(tablet-port) {
     display: block;
   }
 }

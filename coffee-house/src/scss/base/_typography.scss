@@ -17,6 +17,11 @@ body {
   font-size: 7.2rem;
   font-weight: 600;
   line-height: 105%;
+
+  @include respond(phone) {
+    font-size: 4.2rem;
+    line-height: 115%;
+  }
 }
 
 .heading-2 {

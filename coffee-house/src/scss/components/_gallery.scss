@@ -4,6 +4,10 @@
 
   grid-template-columns: 1fr 1fr;
 
+  @include respond(tablet) {
+    grid-template-columns: 1fr;
+  }
+
   &__item {
     border-radius: 2rem;
     overflow: hidden;
@@ -13,13 +17,23 @@
     }
     &--2 {
       height: 43rem;
+      @include respond(tablet) {
+        display: none;
+      }
     }
     &--3 {
       height: 43rem;
+      @include respond(tablet) {
+        display: none;
+      }
     }
     &--4 {
       margin-top: -16rem; //difference
       height: 59rem;
+
+      @include respond(tablet) {
+        margin-top: 0;
+      }
     }
 
     img {
@@ -28,11 +42,21 @@
       object-fit: cover;
       scale: 1.1;
       transition: all 0.3s;
+
+      @include respond(tablet) {
+        scale: 1.05;
+      }
+
+      @include respond(phone) {
+        scale: 1.25;
+      }
     }
 
-    &:hover {
-      img {
-        scale: 1;
+    @media (hover: hover) {
+      &:hover {
+        img {
+          scale: 1;
+        }
       }
     }
   }

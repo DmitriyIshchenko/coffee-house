@@ -161,8 +161,20 @@
     background-color: var(--color-border-light);
   }
 
-  &:hover,
-  &:active,
+  @media (hover: hover) {
+    &:hover,
+    &:active,
+    &--active {
+      color: var(--color-text-light);
+      border-color: var(--color-border-dark);
+      background-color: var(--color-border-dark);
+
+      img {
+        background-color: var(--color-bg-body);
+      }
+    }
+  }
+
   &--active {
     color: var(--color-text-light);
     border-color: var(--color-border-dark);
@@ -171,9 +183,6 @@
     img {
       background-color: var(--color-bg-body);
     }
-  }
-
-  &--active {
     pointer-events: none;
   }
 }

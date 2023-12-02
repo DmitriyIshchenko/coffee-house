@@ -99,7 +99,7 @@
   &:link,
   &:visited {
     @extend %btn;
-    padding: 0.6rem 2rem;
+    padding: 1.2rem 2rem;
 
     display: grid;
     grid-template-columns: 3.6rem 1fr;
@@ -113,13 +113,15 @@
     }
   }
 
-  &:hover,
-  &:active {
-    background-color: var(--color-bg-container);
-    color: var(--color-text-light);
-
-    svg {
+  @media (hover: hover) {
+    &:hover,
+    &:active {
+      background-color: var(--color-bg-container);
       color: var(--color-text-light);
+
+      svg {
+        color: var(--color-text-light);
+      }
     }
   }
 

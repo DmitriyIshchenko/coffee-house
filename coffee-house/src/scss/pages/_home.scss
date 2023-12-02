@@ -58,6 +58,14 @@
   display: flex;
   gap: 10rem;
 
+  @include respond(tablet) {
+    flex-direction: column;
+  }
+
+  @include respond(phone) {
+    gap: 4rem;
+  }
+
   &__info {
     flex: 1;
 
@@ -70,9 +78,21 @@
   &__links {
     display: flex;
     gap: 2rem;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 
   &__img-box {
     flex: 1;
+
+    @include respond(tablet) {
+      padding-inline: 3rem;
+    }
+
+    @include respond(phone) {
+      padding: 0;
+    }
   }
 }

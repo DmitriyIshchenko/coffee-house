@@ -21,7 +21,7 @@
     gap: 4rem;
 
     // TEMP
-    @include respond(tablet-land) {
+    @include respond(tablet-port) {
       & .card:nth-child(n + 5) {
         display: none;
       }
@@ -32,7 +32,7 @@
     display: none;
     align-self: center;
 
-    @include respond(tablet-land) {
+    @include respond(tablet-port) {
       display: flex;
     }
   }

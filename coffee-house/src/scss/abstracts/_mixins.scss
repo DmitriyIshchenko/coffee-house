@@ -19,6 +19,12 @@ Phone small: 380px - 23.75em
     }
   }
 
+  @if $breakpoint == phone-lg {
+    @media only screen and (max-width: 42.5em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == tablet-port {
     @media only screen and (max-width: 48em) {
       @content;

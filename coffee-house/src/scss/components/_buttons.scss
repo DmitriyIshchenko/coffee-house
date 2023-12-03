@@ -75,16 +75,6 @@
         stroke: var(--color-text-light);
       }
     }
-
-    &--light:hover,
-    &--light:active {
-      background-color: var(--color-bg-body);
-      border-color: var(--color-bg-body);
-
-      svg {
-        stroke: var(--color-text-dark);
-      }
-    }
   }
 
   &--light:link,
@@ -93,6 +83,18 @@
 
     svg {
       stroke: var(--color-border-light);
+    }
+  }
+
+  @media (hover: hover) {
+    &--light:hover,
+    &--light:active {
+      background-color: var(--color-bg-body);
+      border-color: var(--color-bg-body);
+
+      svg {
+        stroke: var(--color-text-dark);
+      }
     }
   }
 }

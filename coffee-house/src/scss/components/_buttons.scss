@@ -32,7 +32,8 @@
       max-width: 0;
       height: 2rem;
 
-      @media (hover: none) {
+      // always show the cup on small screens
+      @include respond(tablet-port) {
         max-width: 2rem;
       }
     }

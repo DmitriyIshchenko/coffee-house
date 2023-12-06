@@ -31,6 +31,11 @@
       transition: all 0.3s;
       max-width: 0;
       height: 2rem;
+
+      // always show the cup on small screens
+      @include respond(tablet-port) {
+        max-width: 2rem;
+      }
     }
   }
 
@@ -50,6 +55,7 @@
 
     width: 6rem;
     height: 6rem;
+    aspect-ratio: 1;
 
     background-color: transparent;
     border: 1px solid var(--color-border-dark);
@@ -61,12 +67,14 @@
     }
   }
 
-  &:hover,
-  &:active {
-    background-color: var(--color-bg-container);
+  @media (hover: hover) {
+    &:hover,
+    &:active {
+      background-color: var(--color-bg-container);
 
-    svg {
-      stroke: var(--color-text-light);
+      svg {
+        stroke: var(--color-text-light);
+      }
     }
   }
 
@@ -79,13 +87,15 @@
     }
   }
 
-  &--light:hover,
-  &--light:active {
-    background-color: var(--color-bg-body);
-    border-color: var(--color-bg-body);
+  @media (hover: hover) {
+    &--light:hover,
+    &--light:active {
+      background-color: var(--color-bg-body);
+      border-color: var(--color-bg-body);
 
-    svg {
-      stroke: var(--color-text-dark);
+      svg {
+        stroke: var(--color-text-dark);
+      }
     }
   }
 }
@@ -95,7 +105,7 @@
   &:link,
   &:visited {
     @extend %btn;
-    padding: 0.6rem 2rem;
+    padding: 1.2rem 2rem;
 
     display: grid;
     grid-template-columns: 3.6rem 1fr;
@@ -109,13 +119,15 @@
     }
   }
 
-  &:hover,
-  &:active {
-    background-color: var(--color-bg-container);
-    color: var(--color-text-light);
-
-    svg {
+  @media (hover: hover) {
+    &:hover,
+    &:active {
+      background-color: var(--color-bg-container);
       color: var(--color-text-light);
+
+      svg {
+        color: var(--color-text-light);
+      }
     }
   }
 
@@ -152,8 +164,20 @@
     background-color: var(--color-border-light);
   }
 
-  &:hover,
-  &:active,
+  @media (hover: hover) {
+    &:hover,
+    &:active,
+    &--active {
+      color: var(--color-text-light);
+      border-color: var(--color-border-dark);
+      background-color: var(--color-border-dark);
+
+      img {
+        background-color: var(--color-bg-body);
+      }
+    }
+  }
+
   &--active {
     color: var(--color-text-light);
     border-color: var(--color-border-dark);
@@ -162,9 +186,6 @@
     img {
       background-color: var(--color-bg-body);
     }
-  }
-
-  &--active {
     pointer-events: none;
   }
 }

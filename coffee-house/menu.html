@@ -15,41 +15,47 @@
 
 <body>
   <header class="header" id="header">
-    <nav class="nav container">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="index.html">
-            <img class="logo" src="src/imgs/logo.png" alt="logo">
-          </a>
-        </li>
+    <div class="container">
 
-        <li>
-          <ul>
-            <li class="nav__item">
-              <a class="nav__link" href="index.html#favorites">Favorite coffee</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="index.html#about">About</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="index.html#mobile-app">Mobile app</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#footer">Contact us</a>
-            </li>
-          </ul>
-        </li>
+      <a href="index.html">
+        <img class="logo" src="src/imgs/logo.png" alt="logo">
+      </a>
 
-        <li class="nav__item">
-          <a class="nav__link nav__link--active" href="#!">
-            <span>Menu</span>
-            <svg>
-              <use href="src/imgs/sprite.svg#coffee-cup"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="index.html#favorites">Favorite coffee</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="index.html#about">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="index.html#mobile-app">Mobile app</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#footer">Contact us</a>
+          </li>
+
+          <li class="nav__item nav__item--menu">
+            <a class="menu-link menu-link--active" href="menu.html">
+              <span>Menu</span>
+              <svg>
+                <use href="src/imgs/sprite.svg#coffee-cup"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a class="menu-link nav__link menu-link--active" href="menu.html">
+        <span>Menu</span>
+        <svg>
+          <use href="src/imgs/sprite.svg#coffee-cup"></use>
+        </svg>
+      </a>
+
+      <button class="btn-nav"></button>
+    </div>
   </header>
 
   <main class="main">
@@ -129,6 +135,7 @@
               <p class="card__price heading-3">$4.50</p>
             </div>
           </article>
+
           <article class="card">
             <div class="card__img-box">
               <img src="src/imgs/coffee-6.jpeg" alt="Latte">
@@ -139,6 +146,7 @@
               <p class="card__price heading-3">$5.50</p>
             </div>
           </article>
+
           <article class="card">
             <div class="card__img-box">
               <img src="src/imgs/coffee-7.jpeg" alt="Latte macchiato">
@@ -149,6 +157,7 @@
               <p class="card__price heading-3">$5.50</p>
             </div>
           </article>
+
           <article class="card">
             <div class="card__img-box">
               <img src="src/imgs/coffee-8.jpeg" alt="Coffee with cognac">
@@ -160,6 +169,12 @@
             </div>
           </article>
         </div>
+
+        <button class="btn-icon">
+          <svg>
+            <use href="src/imgs/sprite.svg#refresh"></use>
+          </svg>
+        </button>
       </div>
     </section>
 

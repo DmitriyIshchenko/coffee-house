@@ -1,0 +1,39 @@
+/*
+Desktop: 1440px+ - 90em
+Tablet landscape: 900px - 56.25em
+Tablet portrait: 768px - 48em
+Phone: 592px -  37em
+Phone small: 380px - 23.75em
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone-sm {
+    @media only screen and (max-width: 23.75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-lg {
+    @media only screen and (max-width: 42.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-port {
+    @media only screen and (max-width: 48em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-land {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+}

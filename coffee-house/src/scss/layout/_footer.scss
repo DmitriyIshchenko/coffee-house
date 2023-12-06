@@ -11,6 +11,22 @@
 
   background-color: var(--color-bg-container);
 
+  @include respond(tablet-land) {
+    flex-direction: column;
+    align-items: start;
+
+    padding: 10rem 6rem;
+  }
+
+  @include respond(phone) {
+    padding: 10rem 4rem;
+  }
+
+  @include respond(phone-sm) {
+    padding: 6rem 1.6rem;
+    gap: 4rem;
+  }
+
   &__offer {
     flex: 1;
 
@@ -70,9 +86,11 @@
       transform: scaleX(0);
     }
 
-    &:hover:after,
-    &:active:after {
-      transform: scaleX(1);
+    @media (hover: hover) {
+      &:hover:after,
+      &:active:after {
+        transform: scaleX(1);
+      }
     }
 
     &--schedule {

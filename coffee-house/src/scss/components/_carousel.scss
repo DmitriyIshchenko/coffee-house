@@ -4,6 +4,10 @@
   align-items: center;
   justify-content: space-between;
 
+  @include respond(phone-lg) {
+    justify-content: center;
+  }
+
   &__btn {
     &--prev {
       left: 0.4rem;
@@ -11,6 +15,10 @@
 
     &--next {
       right: 0.4rem;
+    }
+
+    @include respond(phone-lg) {
+      display: none;
     }
   }
 
@@ -47,6 +55,10 @@
   align-items: center;
   gap: 2rem;
   width: 48rem;
+
+  @include respond(phone-lg) {
+    width: 100%;
+  }
 
   &__info {
     display: flex;

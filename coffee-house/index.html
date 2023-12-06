@@ -15,41 +15,47 @@
 
 <body>
   <header class="header" id="header">
-    <nav class="nav container">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="index.html">
-            <img class="logo" src="src/imgs/logo.png" alt="logo">
-          </a>
-        </li>
+    <div class="container">
 
-        <li>
-          <ul>
-            <li class="nav__item">
-              <a class="nav__link" href="#favorites">Favorite coffee</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#about">About</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#mobile-app">Mobile app</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#footer">Contact us</a>
-            </li>
-          </ul>
-        </li>
+      <a href="index.html">
+        <img class="logo" src="src/imgs/logo.png" alt="logo">
+      </a>
 
-        <li class="nav__item">
-          <a class="nav__link" href="menu.html">
-            <span>Menu</span>
-            <svg>
-              <use href="src/imgs/sprite.svg#coffee-cup"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#favorites">Favorite coffee</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#about">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#mobile-app">Mobile app</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#footer">Contact us</a>
+          </li>
+
+          <li class="nav__item nav__item--menu">
+            <a class="menu-link" href="menu.html">
+              <span>Menu</span>
+              <svg>
+                <use href="src/imgs/sprite.svg#coffee-cup"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a class="menu-link nav__link" href="menu.html">
+        <span>Menu</span>
+        <svg>
+          <use href="src/imgs/sprite.svg#coffee-cup"></use>
+        </svg>
+      </a>
+
+      <button class="btn-nav"></button>
+    </div>
   </header>
 
   <main class="main">
@@ -135,7 +141,7 @@
       <div class="mobile-app container">
         <div class="mobile-app__info">
           <h2 class="heading-2"><span class="text-accent">Download</span> our apps to start ordering</h2>
-          <p>Download the Resource app today and experience the comfort of ordering your favorite coffee frhom wherever
+          <p>Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever
             you
             are</p>
           <div class="mobile-app__links">
@@ -151,7 +157,7 @@
                 <use href="src/imgs/sprite.svg#google"></use>
               </svg>
               <span class="btn-appstore__caption text-caption">Available on</span>
-              <span class="btn-appstore__title">Google play</span>
+              <span class="btn-appstore__title">Google Play</span>
             </a>
           </div>
         </div>

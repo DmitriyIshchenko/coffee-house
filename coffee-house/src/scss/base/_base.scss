@@ -9,6 +9,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -35,5 +36,5 @@ img {
   max-width: 144rem;
   margin: 0 auto;
 
-  padding-inline: 4rem;
+  padding-inline: var(--padding-inline);
 }

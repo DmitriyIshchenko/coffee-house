@@ -1,5 +1,6 @@
 .main {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10rem;
   margin-bottom: 10rem;
 }
@@ -12,12 +13,28 @@
   padding: 10rem;
   max-width: 136rem;
 
+  @include respond(tablet-port) {
+    background-position: 50%;
+    padding-inline: 6rem;
+  }
+
+  @include respond(phone) {
+    padding: 6rem 4rem;
+  }
+
+  @include respond(phone-sm) {
+    padding: 6rem 1.6rem;
+  }
+
   &__info {
     width: 53rem;
-
     display: flex;
     flex-direction: column;
     gap: 4rem;
+
+    @include respond(tablet-port) {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -45,6 +62,14 @@
   display: flex;
   gap: 10rem;
 
+  @include respond(tablet-port) {
+    flex-direction: column;
+  }
+
+  @include respond(phone-sm) {
+    gap: 4rem;
+  }
+
   &__info {
     flex: 1;
 
@@ -57,9 +82,21 @@
   &__links {
     display: flex;
     gap: 2rem;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 
   &__img-box {
     flex: 1;
+
+    @include respond(tablet-port) {
+      padding-inline: 3rem;
+    }
+
+    @include respond(phone-sm) {
+      padding: 0;
+    }
   }
 }

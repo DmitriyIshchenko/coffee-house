@@ -6,9 +6,8 @@
 }
 
 .hero {
-  background-image: url("/src/imgs/hero.webp");
-  background-size: cover;
-  background-position: 0%;
+  position: relative;
+  overflow: hidden;
   border-radius: 4rem;
   padding: 10rem;
   max-width: 136rem;

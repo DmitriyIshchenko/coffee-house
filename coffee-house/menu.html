@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/menu.js"></script>
   <title>Coffee house | Menu</title>
 </head>
 
@@ -81,7 +82,7 @@
         </div>
 
         <div class="menu__items">
-          <article class="card">
+          <article class="card" data-name="Irish coffee">
             <div class="card__img-box">
               <img src="src/imgs/coffee-1.webp" alt="Irish coffee">
             </div>
@@ -177,8 +178,13 @@
         </button>
       </div>
     </section>
-
   </main>
+  <dialog class="dialog">
+    <form method="dialog" class="dialog__form">
+      <div class="dialog__content"></div>
+      <button>Close</button>
+    </form>
+  </dialog>
 
   <footer class="footer-section" id="footer">
     <div class="container">

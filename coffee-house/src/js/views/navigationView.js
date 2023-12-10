@@ -4,7 +4,7 @@ class NavigationView extends View {
   _parentEl = document.querySelector(".header");
   _navBtn = this._parentEl.querySelector(".btn-nav");
 
-  _addListenerToggleNavigation() {
+  addListenerToggleNavigation() {
     this._parentEl.addEventListener("click", (e) => {
       const link = e.target.closest(".nav__link");
       if (!link) return;

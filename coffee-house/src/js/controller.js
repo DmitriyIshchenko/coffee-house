@@ -1,7 +1,7 @@
 import navigationView from "./views/navigationView";
 
 function init() {
-  navigationView._addListenerToggleNavigation();
+  navigationView.addListenerToggleNavigation();
 }
 
 init();

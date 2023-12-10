@@ -13,9 +13,10 @@ class RefreshMenuView extends View {
   }
 
   _generateMarkup() {
-    const { isFullMenuDisplayed } = this._data;
+    const { isFullMenuDisplayed, currentCategory } = this._data;
 
-    if (isFullMenuDisplayed) return "";
+    // REFACTOR: remove hardcoded solution
+    if (isFullMenuDisplayed || currentCategory === "tea") return "";
 
     return `
       <button class="btn-icon">

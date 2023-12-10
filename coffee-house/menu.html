@@ -68,20 +68,31 @@
         </h1>
 
         <div class="menu__tabs">
-          <button class="btn-tab btn-tab--active" data-category="coffee">
-            <img src="src/imgs/hot-beverage.svg" alt="coffee emoji">
+
+          <label for="tab-coffee" class="btn-tab">
+            <input type="radio" id="tab-coffee" name="menu-tab" value="coffee" hidden checked />
+            <span class="btn-tab__icon">
+              <img src="src/imgs/hot-beverage.svg" alt="coffee emoji">
+            </span>
             <span>Coffee</span>
-          </button>
+          </label>
 
-          <button class="btn-tab" data-category="tea">
-            <img src="src/imgs/teapot.svg" alt="teapot emoji">
+          <label for="tab-tea" class="btn-tab">
+            <input type="radio" id="tab-tea" name="menu-tab" value="tea" hidden />
+            <span class="btn-tab__icon">
+              <img class="btn-tab__icon" src="src/imgs/teapot.svg" alt="teapot emoji">
+            </span>
             <span>Tea</span>
-          </button>
+          </label>
 
-          <button class="btn-tab" data-category="dessert">
-            <img src="src/imgs/dessert.svg" alt="dessert emoji">
+          <label for="tab-dessert" class="btn-tab">
+            <input type="radio" id="tab-dessert" name="menu-tab" value="dessert" hidden />
+            <span class="btn-tab__icon">
+              <img src="src/imgs/dessert.svg" alt="dessert emoji">
+            </span>
             <span>Dessert</span>
-          </button>
+          </label>
+
         </div>
 
         <div class="menu__items">
@@ -182,10 +193,12 @@
     </section>
   </main>
 
-  <dialog class="dialog">
-    <form method="dialog" class="dialog__form">
-      <div class="dialog__content"></div>
-      <button>Close</button>
+  <dialog class="modal">
+    <form method="modal" class="modal__form">
+      <div class="modal__content">
+
+      </div>
+      <button class="modal__close btn-secondary">Close</button>
     </form>
   </dialog>
 

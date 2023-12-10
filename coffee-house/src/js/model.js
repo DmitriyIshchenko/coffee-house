@@ -5,3 +5,9 @@ export const state = {
   currentCategory: "coffee",
   modalItem: {},
 };
+
+export function getMenuTabContent() {
+  return state.menuData.filter(
+    (item) => item.category === state.currentCategory
+  );
+}

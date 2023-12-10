@@ -1,8 +1,6 @@
 import View from "./View";
 
 class CardView extends View {
-  _parentElement = "";
-
   _generateMarkup() {
     return `
       <article class="card" id=${this._data.id}>

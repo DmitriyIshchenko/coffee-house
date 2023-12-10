@@ -11,3 +11,7 @@ export function getMenuTabContent() {
     (item) => item.category === state.currentCategory
   );
 }
+
+export function updateCurrentMenuTab(category) {
+  state.currentCategory = category;
+}

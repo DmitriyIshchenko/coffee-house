@@ -1,7 +1,7 @@
 import View from "./View";
 
 class ModalView extends View {
-  _parentEl = document.querySelector(".dialog");
+  _parentEl = document.querySelector(".modal");
   _menu = document.querySelector(".menu__items");
 
   addHandlerToggleModal(handler) {

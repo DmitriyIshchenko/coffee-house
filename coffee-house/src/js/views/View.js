@@ -12,6 +12,10 @@ class View {
   _clear() {
     this._parentEl.innerHTML = "";
   }
+
+  _isBigScreen() {
+    return window.innerWidth > 768;
+  }
 }
 
 export default View;

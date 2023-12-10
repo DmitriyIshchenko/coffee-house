@@ -6,9 +6,13 @@ import refreshMenuView from "./views/refreshMenuView";
 
 const controlModal = () => {};
 
-const controlTabs = (category) => {
+// REFACTOR: repeating code all over the place
+
+const controlTabs = (category, isBigScreen) => {
   model.updateCurrentMenuTab(category);
+  model.updateMenuDisplay(isBigScreen);
   menuView.render(model.getMenuTabContent());
+  refreshMenuView.render(model.state);
 };
 
 const controlScreenSize = (isBigScreen) => {

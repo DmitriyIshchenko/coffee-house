@@ -23,10 +23,6 @@ class MenuView extends View {
     });
   }
 
-  _isBigScreen() {
-    return window.innerWidth > 768;
-  }
-
   _generateMarkup() {
     return this._data.map((item) => cardView.render(item, false)).join("");
   }

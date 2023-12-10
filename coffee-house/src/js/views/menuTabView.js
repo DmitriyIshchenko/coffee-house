@@ -15,7 +15,7 @@ class MenuTabView extends View {
       clickedTab.classList.add("btn-tab--active");
 
       const { category } = clickedTab.dataset;
-      handler(category);
+      handler(category, this._isBigScreen());
     });
   }
 }

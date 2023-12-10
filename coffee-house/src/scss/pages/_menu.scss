@@ -19,13 +19,11 @@
     grid-template-columns: repeat(auto-fit, 31rem);
     grid-auto-rows: 1fr;
     gap: 4rem;
+  }
 
-    // TEMP
-    @include respond(tablet-port) {
-      & .card:nth-child(n + 5) {
-        display: none;
-      }
-    }
+  &__load {
+    display: flex;
+    justify-content: center;
   }
 
   .btn-icon {

@@ -1,0 +1,30 @@
+import View from "./View";
+
+class RefreshMenuView extends View {
+  _parentEl = document.querySelector(".menu__load");
+
+  addHandlerRefreshMenu(handler) {
+    this._parentEl.addEventListener("click", (e) => {
+      const btn = e.target.closest(".btn-icon");
+      if (!btn) return;
+
+      handler();
+    });
+  }
+
+  _generateMarkup() {
+    const { isFullMenuDisplayed } = this._data;
+
+    if (isFullMenuDisplayed) return "";
+
+    return `
+      <button class="btn-icon">
+        <svg>
+          <use href="src/imgs/sprite.svg#refresh"></use>
+        </svg>
+      </button>
+    `;
+  }
+}
+
+export default new RefreshMenuView();

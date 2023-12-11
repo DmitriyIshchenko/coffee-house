@@ -44,12 +44,34 @@
     width: 4rem;
     height: 0.4rem;
     border-radius: 100rem;
+    overflow: hidden;
 
     background-color: var(--color-border-light);
 
-    &--active {
-      background-color: var(--color-border-dark);
+    span {
+      display: block;
+
+      height: 100%;
+      background-color: transparent;
     }
+
+    &--active {
+      span {
+        max-width: 100%;
+        background-color: var(--color-border-dark);
+        animation: fill 5s linear;
+      }
+    }
+  }
+}
+
+@keyframes fill {
+  0% {
+    max-width: 0%;
+  }
+
+  100% {
+    max-width: 100%;
   }
 }
 

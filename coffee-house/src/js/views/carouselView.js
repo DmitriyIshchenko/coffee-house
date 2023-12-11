@@ -2,15 +2,19 @@ import View from "./View";
 
 class CarouselView extends View {
   _parentEl = document.querySelector(".carousel");
+  _window = this._parentEl.querySelector(".carousel__window");
   _inner = this._parentEl.querySelector(".carousel__inner");
 
   _currentSlide = 0;
   _touchstart = 0;
   _touchend = 0;
+  _timer;
+  _isPaused = false;
 
   constructor() {
     super();
 
+    // BUTTONS
     this._parentEl.addEventListener("click", (e) => {
       const btn = e.target.closest(".btn-icon");
       if (!btn) return;
@@ -20,8 +24,9 @@ class CarouselView extends View {
       direction === "prev" ? this._moveLeft() : this._moveRight();
     });
 
-    // TOUCH
+    // TOUCH SWIPING
     this._parentEl.addEventListener("touchstart", (e) => {
+      e.stopPropagation();
       this._touchstart = e.changedTouches[0].screenX;
     });
 
@@ -31,11 +36,30 @@ class CarouselView extends View {
       this._checkSwipe();
     });
 
-    setInterval(() => {
-      if (!this._isPaused) {
+    // PAUSE ANIMATION
+    this._window.addEventListener("mouseover", (e) => {
+      // single touch emits mouseover event
+      if (e.sourceCapabilities.firesTouchEvents) return;
+      this._isPaused = true;
+      this._toggleAnimation();
+    });
+
+    this._window.addEventListener("mouseleave", (e) => {
+      this._isPaused = false;
+      this._toggleAnimation();
+    });
+
+    // AUTO-SCROLL
+    document
+      .querySelector(".carousel__bars")
+      .addEventListener("animationend", (e) => {
         this._moveRight();
-      }
-    }, 5000);
+      });
+  }
+
+  _toggleAnimation() {
+    const currentBar = document.querySelector(".carousel__bar--active span");
+    currentBar.style.animationPlayState = this._isPaused ? "paused" : "running";
   }
 
   _checkSwipe() {

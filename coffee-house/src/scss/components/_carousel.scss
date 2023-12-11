@@ -1,30 +1,35 @@
 .carousel {
-  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  @include respond(phone-lg) {
-    justify-content: center;
-  }
+  gap: 2rem;
+  width: 100%;
 
   &__btn {
-    &--prev {
-      left: 0.4rem;
-    }
-
-    &--next {
-      right: 0.4rem;
-    }
-
     @include respond(phone-lg) {
       display: none;
     }
   }
 
+  &__window {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+
+    transition: all 0.3s;
+  }
+
   &__slide {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-width: 100%;
+    max-width: 100%;
   }
 
   &__bars {

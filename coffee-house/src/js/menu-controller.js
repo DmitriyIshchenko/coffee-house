@@ -39,8 +39,6 @@ function init() {
   menuTabView.addHandlerChangeTab(controlTabs);
   menuView.addHandlerChangeScreenSize(controlScreenSize);
   refreshMenuView.addHandlerRefreshMenu(controlRefreshMenu);
-
-  // orderView.addHandlerChangeOptions();
 }
 
 init();

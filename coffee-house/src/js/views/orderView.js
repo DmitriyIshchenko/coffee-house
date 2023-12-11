@@ -78,8 +78,9 @@ class OrderView extends View {
   }
 
   _generateAdditivesMarkup(additives) {
-    return additives.map((item, index) => {
-      return ` 
+    return additives
+      .map((item, index) => {
+        return ` 
       <label for="additive-${index + 1}" class="btn-tab">
         <input type="checkbox" id="additive-${
           index + 1
@@ -87,8 +88,9 @@ class OrderView extends View {
         <span class="btn-tab__icon">${index + 1}</span>
         <span>${item.name}</span>
       </label>
-  `;
-    });
+      `;
+      })
+      .join("");
   }
 }
 

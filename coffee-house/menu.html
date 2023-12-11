@@ -9,8 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <title>Coffee house | Menu</title>
-  <script type="module" crossorigin src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/main-h9vPFqxO.js"></script>
-  <link rel="stylesheet" crossorigin href="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/main-X4unm7Xl.css">
+  <script type="module" crossorigin src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/menu-pZ6EVu9F.js"></script>
+  <link rel="modulepreload" crossorigin href="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/controller-G_Cxza20.js">
+  <link rel="stylesheet" crossorigin href="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/controller-bODF0Bi1.css">
 </head>
 
 <body>
@@ -37,7 +38,7 @@
           </li>
 
           <li class="nav__item nav__item--menu">
-            <a class="menu-link menu-link--active" href="menu.html">
+            <a class="menu-link menu-link--active" href="#">
               <span>Menu</span>
               <svg>
                 <use href="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/sprite-Rj9p57E6.svg#coffee-cup"></use>
@@ -47,7 +48,7 @@
         </ul>
       </nav>
 
-      <a class="menu-link nav__link menu-link--active" href="menu.html">
+      <a class="menu-link nav__link menu-link--active" href="#">
         <span>Menu</span>
         <svg>
           <use href="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/sprite-Rj9p57E6.svg#coffee-cup"></use>
@@ -67,23 +68,36 @@
         </h1>
 
         <div class="menu__tabs">
-          <button class="btn-tab btn-tab--active">
-            <img src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/hot-beverage-EFpTFgCQ.svg" alt="coffee emoji">
+          <label for="tab-coffee" class="btn-tab">
+            <input type="radio" id="tab-coffee" name="menu-tab" value="coffee" hidden checked />
+            <span class="btn-tab__icon">
+              <img src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/hot-beverage-EFpTFgCQ.svg" alt="coffee emoji">
+            </span>
             <span>Coffee</span>
-          </button>
-          <button class="btn-tab">
-            <img src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/teapot-nrPKaL-z.svg" alt="teapot emoji">
+          </label>
+
+          <label for="tab-tea" class="btn-tab">
+            <input type="radio" id="tab-tea" name="menu-tab" value="tea" hidden />
+            <span class="btn-tab__icon">
+              <img class="btn-tab__icon" src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/teapot-nrPKaL-z.svg" alt="teapot emoji">
+            </span>
             <span>Tea</span>
-          </button><button class="btn-tab">
-            <img src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/dessert-xs1gs2V4.svg" alt="dessert emoji">
+          </label>
+
+          <label for="tab-dessert" class="btn-tab">
+            <input type="radio" id="tab-dessert" name="menu-tab" value="dessert" hidden />
+            <span class="btn-tab__icon">
+              <img src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/dessert-xs1gs2V4.svg" alt="dessert emoji">
+            </span>
             <span>Dessert</span>
-          </button>
+          </label>
+
         </div>
 
         <div class="menu__items">
-          <article class="card">
-            <div class="card__img-box">
-              <img src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/coffee-1-CzUp8fA7.webp" alt="Irish coffee">
+          <!-- <article class="card" data-name="Irish coffee" id="coffee-1">
+            <div class=" card__img-box">
+              <img src="src/imgs/coffee-1.webp" alt="Irish coffee">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Irish coffee</h3>
@@ -94,7 +108,7 @@
 
           <article class="card">
             <div class="card__img-box">
-              <img src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/coffee-2-Bl8hoDn6.webp" alt="Kahlua coffee">
+              <img src="src/imgs/coffee-2.webp" alt="Kahlua coffee">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Kahlua coffee</h3>
@@ -105,7 +119,7 @@
 
           <article class="card">
             <div class="card__img-box">
-              <img src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/coffee-3-8sTxJRcT.webp" alt="Honey raf">
+              <img src="src/imgs/coffee-3.webp" alt="Honey raf">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Honey raf</h3>
@@ -116,7 +130,7 @@
 
           <article class="card">
             <div class="card__img-box">
-              <img src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/coffee-4-ASDaDsqS.webp" alt="Ice cappuccino">
+              <img src="src/imgs/coffee-4.webp" alt="Ice cappuccino">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Ice cappuccino</h3>
@@ -127,7 +141,7 @@
 
           <article class="card">
             <div class="card__img-box">
-              <img src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/coffee-5-OpxFalos.webp" alt="Espresso">
+              <img src="src/imgs/coffee-5.webp" alt="Espresso">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Espresso</h3>
@@ -138,7 +152,7 @@
 
           <article class="card">
             <div class="card__img-box">
-              <img src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/coffee-6-1-wOBLP8.webp" alt="Latte">
+              <img src="src/imgs/coffee-6.webp" alt="Latte">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Latte</h3>
@@ -149,7 +163,7 @@
 
           <article class="card">
             <div class="card__img-box">
-              <img src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/coffee-7-Sm4S2HcM.webp" alt="Latte macchiato">
+              <img src="src/imgs/coffee-7.webp" alt="Latte macchiato">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Latte macchiato</h3>
@@ -160,25 +174,33 @@
 
           <article class="card">
             <div class="card__img-box">
-              <img src="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/coffee-8-HX3KaNmX.webp" alt="Coffee with cognac">
+              <img src="src/imgs/coffee-8.webp" alt="Coffee with cognac">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Coffee with cognac</h3>
               <p class="card__description">Fragrant black coffee with cognac and whipped cream</p>
               <p class="card__price heading-3">$6.50</p>
             </div>
-          </article>
+          </article> -->
         </div>
 
-        <button class="btn-icon">
-          <svg>
-            <use href="/dmitriyishchenko-JSFE2023Q4/coffee-house/assets/sprite-Rj9p57E6.svg#refresh"></use>
-          </svg>
-        </button>
-      </div>
-    </section>
+        <div class="menu__load">
 
+        </div>
+      </div>
+
+    </section>
   </main>
+
+  <dialog class="modal">
+    <form method="dialog" class="modal__form">
+      <div class="modal__content">
+        <div class="order">
+        </div>
+      </div>
+      <button class="modal__close btn-secondary">Close</button>
+    </form>
+  </dialog>
 
   <footer class="footer-section" id="footer">
     <div class="container">

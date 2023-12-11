@@ -5,7 +5,7 @@ class CardView extends View {
     return `
       <article class="card" id=${this._data.id}>
         <div class="card__img-box">
-          <img src="src/imgs/${this._data.id}.webp" alt="${this._data.name}">
+          <img src="./imgs/${this._data.id}.webp" alt="${this._data.name}">
         </div>
         <div class="card__info">
           <h3 class="heading-3 card__title">${this._data.name}</h3>

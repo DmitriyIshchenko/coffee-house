@@ -21,7 +21,7 @@ class RefreshMenuView extends View {
     return `
       <button class="btn-icon">
         <svg>
-          <use href="src/imgs/sprite.svg#refresh"></use>
+          <use href="./imgs/sprite.svg#refresh"></use>
         </svg>
       </button>
     `;

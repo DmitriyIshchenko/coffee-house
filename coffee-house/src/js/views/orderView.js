@@ -24,7 +24,7 @@ class OrderView extends View {
 
     return `
     <div class="order__img-box">
-      <img src="src/imgs/${id}.webp" alt="${name}">
+      <img src="./imgs/${id}.webp" alt="${name}">
     </div>
 
     <div class="order__info">
@@ -52,7 +52,7 @@ class OrderView extends View {
 
       <p class="order__warning text-caption">
         <svg>
-          <use href="src/imgs/sprite.svg#info-empty"></use>
+          <use href="src./imgs/sprite.svg#info-empty"></use>
         </svg>
         <span>The cost is not final. Download our mobile app to see the final price and place your order. Earn
           loyalty points and enjoy your favorite coffee with up to 20% discount.</span>

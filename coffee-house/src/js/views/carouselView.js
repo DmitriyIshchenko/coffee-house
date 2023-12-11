@@ -25,7 +25,7 @@ class CarouselView extends View {
     });
 
     // TOUCH SWIPING
-    this._parentEl.addEventListener("touchstart", (e) => {
+    this._window.addEventListener("touchstart", (e) => {
       this._touchstart = e.changedTouches[0].screenX;
 
       // pause animation
@@ -36,7 +36,7 @@ class CarouselView extends View {
       e.preventDefault();
     });
 
-    this._parentEl.addEventListener("touchend", (e) => {
+    this._window.addEventListener("touchend", (e) => {
       this._touchend = e.changedTouches[0].screenX;
 
       // resume animation

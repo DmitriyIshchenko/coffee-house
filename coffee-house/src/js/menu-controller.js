@@ -3,10 +3,14 @@ import modalView from "./views/modalView";
 import menuView from "./views/menuView";
 import menuTabView from "./views/menuTabView";
 import refreshMenuView from "./views/refreshMenuView";
-
-const controlModal = () => {};
+import orderView from "./views/orderView";
 
 // REFACTOR: repeating code all over the place
+
+const controlModal = (itemId) => {
+  model.updateModalItem(itemId);
+  orderView.render(model.state.modalItem);
+};
 
 const controlTabs = (category, isBigScreen) => {
   model.updateCurrentMenuTab(category);
@@ -35,6 +39,8 @@ function init() {
   menuTabView.addHandlerChangeTab(controlTabs);
   menuView.addHandlerChangeScreenSize(controlScreenSize);
   refreshMenuView.addHandlerRefreshMenu(controlRefreshMenu);
+
+  // orderView.addHandlerChangeOptions();
 }
 
 init();

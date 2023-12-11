@@ -26,3 +26,7 @@ export function updateMenuDisplay(isBigScreen) {
 export function showFullMenu() {
   state.isFullMenuDisplayed = true;
 }
+
+export function updateModalItem(itemId) {
+  state.modalItem = state.menuData.find((item) => item.id === itemId);
+}

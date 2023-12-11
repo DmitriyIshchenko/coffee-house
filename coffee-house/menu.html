@@ -193,75 +193,9 @@
   </main>
 
   <dialog class="modal">
-    <form method="modal" class="modal__form">
+    <form method="dialog" class="modal__form">
       <div class="modal__content">
         <div class="order">
-          <div class="order__img-box">
-            <img src="src/imgs/coffee-1.webp" alt="">
-          </div>
-          <div class="order__info">
-            <div>
-              <h3 class="order__title heading-3">Irish coffee</h3>
-              <p class="order__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-            </div>
-
-            <fieldset class="order__field">
-              <legend>Size</legend>
-
-              <label for="size-1" class="btn-tab">
-                <input type="radio" id="size-1" name="size" value="s" hidden checked />
-                <span class="btn-tab__icon">S</span>
-                <span>200 ml</span>
-              </label>
-
-              <label for="size-2" class="btn-tab">
-                <input type="radio" id="size-2" name="size" value="m" hidden />
-                <span class="btn-tab__icon">M</span>
-                <span>300 ml</span>
-              </label>
-
-              <label for="size-3" class="btn-tab">
-                <input type="radio" id="size-3" name="size" value="l" hidden />
-                <span class="btn-tab__icon">L</span>
-                <span>400 ml</span>
-              </label>
-            </fieldset>
-
-            <fieldset class="order__field">
-              <legend>Additives</legend>
-
-              <label for="additive-1" class="btn-tab">
-                <input type="checkbox" id="additive-1" name="additive" value="sugar" hidden />
-                <span class="btn-tab__icon">1</span>
-                <span>Sugar</span>
-              </label>
-
-              <label for="additive-2" class="btn-tab">
-                <input type="checkbox" id="additive-2" name="additive" value="cinnamon" hidden />
-                <span class="btn-tab__icon">2</span>
-                <span>Cinnamon</span>
-              </label>
-
-              <label for="additive-3" class="btn-tab">
-                <input type="checkbox" id="additive-3" name="additive" value="syrup" hidden />
-                <span class="btn-tab__icon">3</span>
-                <span>Syrup</span>
-              </label>
-            </fieldset>
-
-            <p class="order__total heading-3">
-              <span>Total:</span>
-              <span>$7.00</span>
-            </p>
-
-            <p class="order__warning text-caption">
-              <svg>
-                <use href="src/imgs/sprite.svg#info-empty"></use>
-              </svg>
-              <span>The cost is not final. Download our mobile app to see the final price and place your order. Earn
-                loyalty points and enjoy your favorite coffee with up to 20% discount.</span>
-            </p>
-          </div>
         </div>
       </div>
       <button class="modal__close btn-secondary">Close</button>

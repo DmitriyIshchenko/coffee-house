@@ -9,7 +9,7 @@ class ModalView extends View {
       const card = e.target.closest(".card");
       if (!card) return;
 
-      // handler();
+      handler(card.id);
       this._parentEl.showModal();
     });
 

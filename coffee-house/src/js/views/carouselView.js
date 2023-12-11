@@ -73,8 +73,8 @@ class CarouselView extends View {
   }
 
   _checkSwipe() {
-    if (this._touchend < this._touchstart) this._moveRight();
-    if (this._touchend > this._touchstart) this._moveLeft();
+    if (this._touchstart - this._touchend > 30) this._moveRight();
+    if (this._touchstart - this._touchend < -30) this._moveLeft();
   }
 
   _moveLeft() {

@@ -45,7 +45,7 @@ var h=Object.defineProperty;var f=(a,d,e)=>d in a?h(a,d,{enumerable:!0,configura
 
       <p class="order__warning text-caption">
         <svg>
-          <use href="src./imgs/sprite.svg#info-empty"></use>
+          <use href="./imgs/sprite.svg#info-empty"></use>
         </svg>
         <span>The cost is not final. Download our mobile app to see the final price and place your order. Earn
           loyalty points and enjoy your favorite coffee with up to 20% discount.</span>

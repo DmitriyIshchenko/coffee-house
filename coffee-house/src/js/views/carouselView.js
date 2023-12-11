@@ -26,17 +26,27 @@ class CarouselView extends View {
 
     // TOUCH SWIPING
     this._parentEl.addEventListener("touchstart", (e) => {
-      e.stopPropagation();
       this._touchstart = e.changedTouches[0].screenX;
+
+      // pause animation
+      this._isPaused = true;
+      this._toggleAnimation();
+
+      // prevent context menu opening
+      e.preventDefault();
     });
 
     this._parentEl.addEventListener("touchend", (e) => {
       this._touchend = e.changedTouches[0].screenX;
 
+      // resume animation
+      this._isPaused = false;
+      this._toggleAnimation();
+
       this._checkSwipe();
     });
 
-    // PAUSE ANIMATION
+    // PAUSE ANIMATION (desktop)
     this._window.addEventListener("mouseover", (e) => {
       // single touch emits mouseover event
       if (e.sourceCapabilities.firesTouchEvents) return;

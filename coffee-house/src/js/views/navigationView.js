@@ -6,7 +6,7 @@ class NavigationView extends View {
 
   addListenerToggleNavigation() {
     this._parentEl.addEventListener("click", (e) => {
-      const link = e.target.closest(".nav__link");
+      const link = e.target.closest(".nav__item");
       if (!link) return;
 
       this._parentEl.classList.remove("nav-open");

@@ -8,8 +8,15 @@
   border: none;
   border-radius: 4rem;
 
-  // TEMP
   width: 80rem;
+
+  @include respond(tablet-port) {
+    width: 68.8rem;
+  }
+
+  @include respond(phone-sm) {
+    width: 34.2rem;
+  }
 
   &::backdrop {
     background: rgba(65, 64, 62, 0.8);
@@ -24,12 +31,20 @@
     grid-template-columns: calc(34rem - 3.2rem) 1fr;
     flex-direction: column;
     gap: 2rem;
+
+    @include respond(phone-lg) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__close {
     grid-column: 2/3;
     grid-row: 2/3;
     width: 100%;
+
+    @include respond(phone-lg) {
+      grid-column: 1/-1;
+    }
   }
 }
 

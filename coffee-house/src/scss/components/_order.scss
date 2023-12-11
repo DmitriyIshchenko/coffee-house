@@ -4,6 +4,10 @@
   gap: 2rem;
   color: var(--color-text-dark);
 
+  @include respond(phone-lg) {
+    grid-template-columns: 1fr;
+  }
+
   &__img-box {
     aspect-ratio: 1;
     border-radius: 4rem;
@@ -11,6 +15,10 @@
 
     img {
       border-radius: 4rem;
+    }
+
+    @include respond(phone-lg) {
+      display: none;
     }
   }
 
@@ -31,6 +39,7 @@
 
     border: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 0.8rem;
   }
 

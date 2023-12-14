@@ -1,0 +1,64 @@
+.order {
+  display: grid;
+  grid-template-columns: calc(34rem - 3.2rem) 1fr;
+  gap: 2rem;
+  color: var(--color-text-dark);
+
+  @include respond(phone-lg) {
+    grid-template-columns: 1fr;
+  }
+
+  &__img-box {
+    aspect-ratio: 1;
+    border-radius: 4rem;
+    overflow: hidden;
+
+    img {
+      border-radius: 4rem;
+    }
+
+    @include respond(phone-lg) {
+      display: none;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__title {
+    margin-bottom: 1.2rem;
+  }
+
+  &__field {
+    legend {
+      margin-bottom: 0.8rem;
+    }
+
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__warning {
+    display: flex;
+    align-items: start;
+    gap: 0.8rem;
+    padding-block: 1.2rem;
+
+    border-top: 1px solid var(--color-border-light);
+
+    svg {
+      width: 3.25rem;
+      aspect-ratio: 1;
+    }
+  }
+}

@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/js/controller.js"></script>
+  <script type="module" src="src/js/menu-controller.js"></script>
   <title>Coffee house | Menu</title>
 </head>
 
@@ -18,7 +19,7 @@
     <div class="container">
 
       <a href="index.html">
-        <img class="logo" src="src/imgs/logo.png" alt="logo">
+        <img class="logo" src="./imgs/logo.png" alt="logo">
       </a>
 
       <nav class="nav">
@@ -37,20 +38,20 @@
           </li>
 
           <li class="nav__item nav__item--menu">
-            <a class="menu-link menu-link--active" href="menu.html">
+            <a class="menu-link menu-link--active" href="#">
               <span>Menu</span>
               <svg>
-                <use href="src/imgs/sprite.svg#coffee-cup"></use>
+                <use href="./imgs/sprite.svg#coffee-cup"></use>
               </svg>
             </a>
           </li>
         </ul>
       </nav>
 
-      <a class="menu-link nav__link menu-link--active" href="menu.html">
+      <a class="menu-link nav__link menu-link--active" href="#">
         <span>Menu</span>
         <svg>
-          <use href="src/imgs/sprite.svg#coffee-cup"></use>
+          <use href="./imgs/sprite.svg#coffee-cup"></use>
         </svg>
       </a>
 
@@ -67,23 +68,36 @@
         </h1>
 
         <div class="menu__tabs">
-          <button class="btn-tab btn-tab--active">
-            <img src="src/imgs/hot-beverage.svg" alt="coffee emoji">
+          <label for="tab-coffee" class="btn-tab">
+            <input type="radio" id="tab-coffee" name="menu-tab" value="coffee" hidden checked />
+            <span class="btn-tab__icon">
+              <img src="./imgs/hot-beverage.svg" alt="coffee emoji">
+            </span>
             <span>Coffee</span>
-          </button>
-          <button class="btn-tab">
-            <img src="src/imgs/teapot.svg" alt="teapot emoji">
+          </label>
+
+          <label for="tab-tea" class="btn-tab">
+            <input type="radio" id="tab-tea" name="menu-tab" value="tea" hidden />
+            <span class="btn-tab__icon">
+              <img class="btn-tab__icon" src="./imgs/teapot.svg" alt="teapot emoji">
+            </span>
             <span>Tea</span>
-          </button><button class="btn-tab">
-            <img src="src/imgs/dessert.svg" alt="dessert emoji">
+          </label>
+
+          <label for="tab-dessert" class="btn-tab">
+            <input type="radio" id="tab-dessert" name="menu-tab" value="dessert" hidden />
+            <span class="btn-tab__icon">
+              <img src="./imgs/dessert.svg" alt="dessert emoji">
+            </span>
             <span>Dessert</span>
-          </button>
+          </label>
+
         </div>
 
         <div class="menu__items">
-          <article class="card">
-            <div class="card__img-box">
-              <img src="src/imgs/coffee-1.jpeg" alt="Irish coffee">
+          <!-- <article class="card" data-name="Irish coffee" id="coffee-1">
+            <div class=" card__img-box">
+              <img src="./imgs/coffee-1.webp" alt="Irish coffee">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Irish coffee</h3>
@@ -94,7 +108,7 @@
 
           <article class="card">
             <div class="card__img-box">
-              <img src="src/imgs/coffee-2.jpeg" alt="Kahlua coffee">
+              <img src="./imgs/coffee-2.webp" alt="Kahlua coffee">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Kahlua coffee</h3>
@@ -105,7 +119,7 @@
 
           <article class="card">
             <div class="card__img-box">
-              <img src="src/imgs/coffee-3.jpeg" alt="Honey raf">
+              <img src="./imgs/coffee-3.webp" alt="Honey raf">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Honey raf</h3>
@@ -116,7 +130,7 @@
 
           <article class="card">
             <div class="card__img-box">
-              <img src="src/imgs/coffee-4.jpeg" alt="Ice cappuccino">
+              <img src="./imgs/coffee-4.webp" alt="Ice cappuccino">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Ice cappuccino</h3>
@@ -127,7 +141,7 @@
 
           <article class="card">
             <div class="card__img-box">
-              <img src="src/imgs/coffee-5.jpeg" alt="Espresso">
+              <img src="./imgs/coffee-5.webp" alt="Espresso">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Espresso</h3>
@@ -138,7 +152,7 @@
 
           <article class="card">
             <div class="card__img-box">
-              <img src="src/imgs/coffee-6.jpeg" alt="Latte">
+              <img src="./imgs/coffee-6.webp" alt="Latte">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Latte</h3>
@@ -149,7 +163,7 @@
 
           <article class="card">
             <div class="card__img-box">
-              <img src="src/imgs/coffee-7.jpeg" alt="Latte macchiato">
+              <img src="./imgs/coffee-7.webp" alt="Latte macchiato">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Latte macchiato</h3>
@@ -160,25 +174,33 @@
 
           <article class="card">
             <div class="card__img-box">
-              <img src="src/imgs/coffee-8.jpeg" alt="Coffee with cognac">
+              <img src="./imgs/coffee-8.webp" alt="Coffee with cognac">
             </div>
             <div class="card__info">
               <h3 class="heading-3 card__title">Coffee with cognac</h3>
               <p class="card__description">Fragrant black coffee with cognac and whipped cream</p>
               <p class="card__price heading-3">$6.50</p>
             </div>
-          </article>
+          </article> -->
         </div>
 
-        <button class="btn-icon">
-          <svg>
-            <use href="src/imgs/sprite.svg#refresh"></use>
-          </svg>
-        </button>
-      </div>
-    </section>
+        <div class="menu__load">
 
+        </div>
+      </div>
+
+    </section>
   </main>
+
+  <dialog class="modal">
+    <form method="dialog" class="modal__form">
+      <div class="modal__content">
+        <div class="order">
+        </div>
+      </div>
+      <button class="modal__close btn-secondary">Close</button>
+    </form>
+  </dialog>
 
   <footer class="footer-section" id="footer">
     <div class="container">
@@ -189,16 +211,16 @@
           <div class="footer__socials">
             <a class="btn-icon btn-icon--light" href="https://twitter.com/">
               <svg>
-                <use href="src/imgs/sprite.svg#twitter"></use>
+                <use href="./imgs/sprite.svg#twitter"></use>
               </svg>
             </a>
             <a class="btn-icon btn-icon--light" href="https://www.instagram.com/">
               <svg>
-                <use href="src/imgs/sprite.svg#instagram"></use>
+                <use href="./imgs/sprite.svg#instagram"></use>
               </svg>
             </a><a class="btn-icon btn-icon--light" href="https://www.facebook.com/">
               <svg>
-                <use href="src/imgs/sprite.svg#facebook"></use>
+                <use href="./imgs/sprite.svg#facebook"></use>
               </svg>
             </a>
           </div>
@@ -212,7 +234,7 @@
               <a class="footer__contact-link text-link" href="https://maps.app.goo.gl/GZrkw8Y7VqrZE3dUA"
                 target="_blank">
                 <svg>
-                  <use href="src/imgs/sprite.svg#pin-alt"></use>
+                  <use href="./imgs/sprite.svg#pin-alt"></use>
                 </svg>
                 <span>8558 Green Rd., LA</span>
               </a>
@@ -220,7 +242,7 @@
             <li>
               <a class="footer__contact-link text-link" href="tel:+16035550123" target="_blank">
                 <svg>
-                  <use href="src/imgs/sprite.svg#phone"></use>
+                  <use href="./imgs/sprite.svg#phone"></use>
                 </svg>
                 <span>+1 (603) 555-0123</span>
               </a>
@@ -228,7 +250,7 @@
             <li>
               <p class="footer__contact-link text-link footer__contact-link--schedule">
                 <svg>
-                  <use href="src/imgs/sprite.svg#clock"></use>
+                  <use href="./imgs/sprite.svg#clock"></use>
                 </svg>
                 <span>Mon-Sat: 9:00 AM – 23:00 PM</span>
               </p>

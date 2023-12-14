@@ -47,6 +47,22 @@
   }
 }
 
+.btn-secondary {
+  @extend %btn;
+
+  background-color: transparent;
+  border: 1px solid var(--color-border-dark);
+  padding-block: 1rem;
+
+  @media (hover: hover) {
+    &:hover,
+    &:active {
+      color: var(--color-text-light);
+      background-color: var(--color-bg-container);
+    }
+  }
+}
+
 .btn-icon {
   &,
   &:link,
@@ -67,9 +83,16 @@
     }
   }
 
+  &:active {
+    background-color: var(--color-bg-container);
+
+    svg {
+      stroke: var(--color-text-light);
+    }
+  }
+
   @media (hover: hover) {
-    &:hover,
-    &:active {
+    &:hover {
       background-color: var(--color-bg-container);
 
       svg {
@@ -87,9 +110,17 @@
     }
   }
 
+  &--light:active {
+    background-color: var(--color-bg-body);
+    border-color: var(--color-bg-body);
+
+    svg {
+      stroke: var(--color-text-dark);
+    }
+  }
+
   @media (hover: hover) {
-    &--light:hover,
-    &--light:active {
+    &--light:hover {
       background-color: var(--color-bg-body);
       border-color: var(--color-bg-body);
 
@@ -155,19 +186,26 @@
   border: 1px solid var(--color-border-light);
   background-color: transparent;
 
-  img {
+  &__icon {
     width: 3rem;
     height: 3rem;
-    padding: 0.5rem;
+    background-color: var(--color-border-light);
+
+    display: grid;
+    place-items: center;
+
     border-radius: 100rem;
 
-    background-color: var(--color-border-light);
+    img {
+      border-radius: 100rem;
+      padding: 0.5rem;
+    }
   }
 
   @media (hover: hover) {
     &:hover,
     &:active,
-    &--active {
+    &:has(input:checked) {
       color: var(--color-text-light);
       border-color: var(--color-border-dark);
       background-color: var(--color-border-dark);
@@ -176,9 +214,14 @@
         background-color: var(--color-bg-body);
       }
     }
+
+    &:hover &__icon {
+      background-color: var(--color-bg-body);
+      color: var(--color-text-dark);
+    }
   }
 
-  &--active {
+  &:has(input:checked) {
     color: var(--color-text-light);
     border-color: var(--color-border-dark);
     background-color: var(--color-border-dark);
@@ -186,6 +229,10 @@
     img {
       background-color: var(--color-bg-body);
     }
-    pointer-events: none;
+  }
+
+  &:has(input:checked) &__icon {
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-body);
   }
 }

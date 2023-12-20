@@ -1,0 +1,63 @@
+.gallery {
+  display: grid;
+  gap: 4rem;
+
+  grid-template-columns: 1fr 1fr;
+
+  @include respond(tablet-port) {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    border-radius: 2rem;
+    overflow: hidden;
+
+    &--1 {
+      height: 59rem;
+    }
+    &--2 {
+      height: 43rem;
+      @include respond(tablet-port) {
+        display: none;
+      }
+    }
+    &--3 {
+      height: 43rem;
+      @include respond(tablet-port) {
+        display: none;
+      }
+    }
+    &--4 {
+      margin-top: -16rem; //difference
+      height: 59rem;
+
+      @include respond(tablet-port) {
+        margin-top: 0;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      scale: 1.1;
+      transition: all 0.3s;
+
+      @include respond(tablet-port) {
+        scale: 1.05;
+      }
+
+      @include respond(phone-sm) {
+        scale: 1.25;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        img {
+          scale: 1;
+        }
+      }
+    }
+  }
+}

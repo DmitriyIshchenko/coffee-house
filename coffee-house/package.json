@@ -1,0 +1,17 @@
+{
+  "name": "coffee-house",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/dmitriyishchenko-JSFE2023Q4/coffee-house",
+    "preview": "vite preview",
+    "deploy": "npm run build && npx gh-pages -d dist -e coffee-house"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0",
+    "sass": "^1.69.5",
+    "vite": "^5.0.0"
+  }
+}
